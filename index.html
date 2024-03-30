@@ -4,19 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My blog page</title>
+    <link rel="stylesheet" href="assets/css/blog.css">
+    <link rel="stylesheet" href="assets/css/form.css">
 </head>
 <body>
-    <h1>Welcome to my blog!</h1>
+  <!-- header section -->
+  <div id="container" class="container light"></div>
+    <h1>Join me as we explore the universe!</h1>
+    <span id="light-dark-mode-switch">☀️</span>
     <hr>
+
     <h2>Latest Posts</h2>
     <div id="posts">
       <article>
-        <h3>Title of the Post</h3>
-        <p>This is the content of the blog post. You can add images, videos, and other formatting here.</p>
-        <p>Posted on: 03-27-2024</p>
+        <h3>Do Aliens exist?</h3>
+        <p>Have you ever encountered a UFO or met someone who says they have?</p>
+
+        <!-- image section -->
+
+        <img src="https://images.theconversation.com/files/541522/original/file-20230807-22-sc9euy.jpg?ixlib=rb-1.1.0&rect=0%2C5%2C1917%2C1270&q=20&auto=format&w=320&fit=clip&dpr=2&usm=12&cs=strip" alt="Aliens image">
+        
       </article>
     </div>
     <hr>
+      <!-- ----- Form Section ----- -->
+      <section id="form-section">
+
+        <form id="formDinoData" action="blog.html" method="post">
+            <h4>What alien theories would you like to share?</h4>
+            <label for="userName">User Name:</label><br>
+            <input name="userName" type="text" id="userName"><br>
+
+            <label for="title">Title:</label><br>
+            <input name="title" type="text" id="title"><br>
+
+            <label for="content">Content:</label><br>
+            <textarea name="content" id="content" rows="8"></textarea>
+
+            <input type="submit" value="confirm" id="submitBtn">
+        </form>
+        <p>Posted on: 03-27-2024</p>
+    </section>
+
     <p><a href="create-post.html">Create a New Post</a></p>
 </body>
 </html>

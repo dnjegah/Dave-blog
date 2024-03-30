@@ -1,0 +1,52 @@
+*{
+    background-color: rgb(179, 220, 220);
+    font-size: xx-large;
+}
+
+:root {
+    --test-outline: 2px solid blue;
+
+    /* light mode */
+    --light-text-color: black;
+
+    /* --dark mode -- */
+    --dark-text-color: white;
+    --dark-bg-color: black;
+    --dark-header-bg: black;
+    --dark-footer-bg: black;
+    --dark-border: 2px solid white;
+}
+
+
+#container {
+    display: block;
+    transition-property: background-color, color, border, background-image;
+    transition-duration: .35s;
+    transition-timing-function: ease-in;
+}
+#light-dark-mode-switch {
+    position: absolute;
+    right: 20px;
+    border-radius: 100%;
+    transition: .35s ease-out;
+}
+
+#light-dark-mode-switch:hover {
+    cursor: pointer;
+   
+}
+/* ---Light Mode--- */
+.light {
+    background-color: var(--light-bg-color);
+    color: var(--light-text-color);
+    font-weight: bold;
+}
+.light #light-dark-mode-switch:hover {
+    box-shadow:inset 0 0 16px  orange, 0 0 28px 5px orange;
+}
+/* ---Dark Mode---  */
+
+.dark {
+    background-color: var(--dark-bg-color);
+    color: var(--dark-text-color);
+}
