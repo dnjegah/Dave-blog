@@ -1,52 +1,108 @@
-*{
-    background-color: rgb(179, 220, 220);
-    font-size: xx-large;
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-:root {
-    --test-outline: 2px solid blue;
-
-    /* light mode */
-    --light-text-color: black;
-
-    /* --dark mode -- */
-    --dark-text-color: white;
-    --dark-bg-color: black;
-    --dark-header-bg: black;
-    --dark-footer-bg: black;
-    --dark-border: 2px solid white;
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
 }
 
-
-#container {
-    display: block;
-    transition-property: background-color, color, border, background-image;
-    transition-duration: .35s;
-    transition-timing-function: ease-in;
+/* Container styles */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Light mode */
+.container.light {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Dark mode */
+.container.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Header styles */
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
 #light-dark-mode-switch {
-    position: absolute;
-    right: 20px;
-    border-radius: 100%;
-    transition: .35s ease-out;
+    cursor: pointer;
 }
 
-#light-dark-mode-switch:hover {
-    cursor: pointer;
-   
+/* Latest Posts section */
+#posts {
+    margin-top: 20px;
 }
-/* ---Light Mode--- */
-.light {
-    background-color: var(--light-bg-color);
-    color: var(--light-text-color);
+
+article {
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Form section */
+#form-section {
+    margin-top: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
     font-weight: bold;
 }
-.light #light-dark-mode-switch:hover {
-    box-shadow:inset 0 0 16px  orange, 0 0 28px 5px orange;
-}
-/* ---Dark Mode---  */
 
-.dark {
-    background-color: var(--dark-bg-color);
-    color: var(--dark-text-color);
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Footer styles */
+p a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/* Image styles */
+img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
 }
